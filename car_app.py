@@ -1,5 +1,3 @@
-import math
-
 command = ""
 mode = 0
 speed = 0.0
@@ -52,9 +50,14 @@ quit - to quit the car""")
 
 
     # give the user warnings
-    if speed >= 75 and speed < 85:
+    if 75 <= speed < 85:
         print(f"you should probably slow down.")
-    elif speed >= 85 and speed < 95:
+    elif 85 <= speed < 95:
         print(f"I think I see a police officer ahead. Better slow down.")
-    elif speed >= 95:
+    elif 95 <= speed < 115:
         print(f"The police officer is signally for you to stop")
+    elif 115 <= speed < 135:
+        print(f"This is dangerous. Someone is going to get hurt")
+    elif speed >= 135:
+        print(f"You crashed! Drive slower next time.")
+        break
